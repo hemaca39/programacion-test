@@ -33,9 +33,9 @@ public class Encuesta {
             }
         }
 
-        double promedio = (double) suma / valoracion.length;
+        double media = (double) suma / valoracion.length;
         System.out.println("resultados");
-        System.out.println("media" + promedio);
+        System.out.println("media" + media);
         System.out.println("clients que van posar 5 " + cinco);
         System.out.println("clients que van posar menys de 3 " + menos3);
     }
