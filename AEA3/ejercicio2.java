@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class ejercicio2 {
      public static void main (String[] args) {
-    EJ2 programa = new EJ2();
+    ejercicio2 programa = new ejercicio2();
     programa.inici();
   }
   public void inici() {
