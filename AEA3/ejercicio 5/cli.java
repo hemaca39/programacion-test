@@ -1,4 +1,4 @@
-public class Client {
+public class cli {
     private String email;
     private String adreça;
     private String nom;
