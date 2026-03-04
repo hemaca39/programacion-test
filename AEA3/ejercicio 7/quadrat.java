@@ -1,7 +1,7 @@
 public class quadrat {
     private int costat;
 
-    public Quadrat(int c) {
+    public quadrat(int c) {
         this.costat = c;
     }
 
