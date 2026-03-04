@@ -1,4 +1,4 @@
-public class quadrat {
+public class quadrat extends figura {
     private int costat;
 
     public quadrat(int c) {
