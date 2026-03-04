@@ -1,4 +1,4 @@
-public class cercle extends Figura {
+public class cercle {
     private int radi;
 
     public cercle(int r) {
