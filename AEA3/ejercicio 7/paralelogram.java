@@ -1,4 +1,4 @@
-public class paralelogram {
+public class paralelogram extends figura {
     private int b, h;
 
     public paralelogram(int b, int h) {
