@@ -1,4 +1,4 @@
-public class trapezi {
+public class trapezi extends figura {
     private int a, b, h;
 
     public trapezi(int a, int b, int h) {
