@@ -1,4 +1,4 @@
-public class rectangle {
+public class rectangle extends figura {
     private int costat1;
     private int costat2;
 
