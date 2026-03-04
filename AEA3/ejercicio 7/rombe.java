@@ -1,4 +1,4 @@
-public class rombe {
+public class rombe extends figura {
     private int dM, dm;
 
     public rombe(int dM, int dm) {
