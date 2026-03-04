@@ -1,4 +1,4 @@
-public class triangle {
+public class triangle extends figura {
     private int base;
     private int h;
 
