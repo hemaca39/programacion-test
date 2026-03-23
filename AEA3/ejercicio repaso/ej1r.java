@@ -79,3 +79,7 @@ public class ej1r {
             sc.nextLine(); 
         sc.close();
     }
+    public static void imprimirResultat(double area) {
+        System.out.println("L area de tu figura es " + area);
+    }
+}
