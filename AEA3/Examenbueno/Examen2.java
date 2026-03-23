@@ -1,5 +1,3 @@
-package UF2.Examen_v2;
-
 import java.util.Scanner;
 import java.util.Arrays;
 

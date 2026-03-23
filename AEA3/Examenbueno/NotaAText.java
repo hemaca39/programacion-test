@@ -1,5 +1,3 @@
-package UF2.Examen_v2;
-
 public class NotaAText {
     public String notaAText(double nota) {
         if (nota < 5) return "Suspés";

@@ -1,5 +1,3 @@
-package UF2.Examen_v2;
-
 public class CercaDicotomica {
 
     public int cercaDicotomica(double[] array, int inici, int fi, double valor) {
