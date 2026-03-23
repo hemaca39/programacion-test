@@ -81,6 +81,5 @@ public class Examen2 {
     }
 }
 //la opcion del 8 no la he puesto
-//lo que no he utilizado lo he eliminado
 //las notas son las que estan en el Pdf de ejem
 // he usado la opcion 1
