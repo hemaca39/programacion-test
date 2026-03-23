@@ -15,7 +15,6 @@ public class CalculArrays {
         }
         return min;
     }
-
     public double calcularMitjana(double[] array, int mida) {
         double suma = 0;
         for (int i = 0; i < mida; i++) {
