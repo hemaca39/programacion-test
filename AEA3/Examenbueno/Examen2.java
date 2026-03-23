@@ -1,5 +1,5 @@
-import java.util.Scanner;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Examen2 {
 
@@ -43,7 +43,7 @@ public class Examen2 {
     }
 
     private void ImprimirArrayNotes() {
-        System.out.print("L'array de notes avaluat és: [ ");
+        System.out.print("Larray de notes avaluat és: [ ");
         for (int i = 0; i < NUM_NOTES; i++) {
             System.out.print(notes[i] + " ");
         }
@@ -51,7 +51,7 @@ public class Examen2 {
     }
 
     private void MostrarMenu() {
-        System.out.println("\nBenvinguda al càlcul de notes de classe.");
+        System.out.println("\nBenvingu al calcul de notes de classe.");
         System.out.println("[MAX] Maxim | [MIN] Minim | [MIT] Mitjana | [FI] Sortir");
         System.out.print("Opció: ");
     }
