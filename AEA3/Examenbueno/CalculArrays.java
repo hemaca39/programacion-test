@@ -1,5 +1,3 @@
-package UF2.Examen_v2;
-
 public class CalculArrays {
     
     public double calcularMaxim(double[] array) {
