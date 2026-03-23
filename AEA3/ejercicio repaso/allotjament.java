@@ -3,7 +3,7 @@ public abstract class allotjament {
     protected int capacitat;
     protected boolean disponible;
 
-    public Allotjament(String nom, int capacitat, boolean disponible) {
+    public allotjament(String nom, int capacitat, boolean disponible) {
         this.nom = nom;
         this.capacitat = capacitat;
         this.disponible = disponible;

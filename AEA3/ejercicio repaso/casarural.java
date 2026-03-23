@@ -2,7 +2,7 @@ public class casarural extends allotjament {
     private boolean teJardi;
     private boolean tePiscina;
 
-    public CasaRural(String nom, int capacitat, boolean disponible, boolean teJardi, boolean tePiscina) {
+    public casarural(String nom, int capacitat, boolean disponible, boolean teJardi, boolean tePiscina) {
         super(nom, capacitat, disponible);
         this.teJardi = teJardi;
         this.tePiscina = tePiscina;
