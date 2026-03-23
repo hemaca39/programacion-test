@@ -21,13 +21,13 @@ public class ej1r {
                 case "quadrat":
                     System.out.println("Quin es el costat del quadrat?");
                     double costat = sc.nextDouble();
-                    imprimirResultat(Calculs.areaQuadrat(costat));
+                    imprimirResultat(ej2r.areaQuadrat(costat));
                     break;
 
                 case "cercle":
                     System.out.println("Quin es el radi del cercle?");
                     double radi = sc.nextDouble();
-                    imprimirResultat(Calculs.areaCercle(radi));
+                    imprimirResultat(ej2r.areaCercle(radi));
                     break;
 
                 case "triangle":
@@ -35,7 +35,7 @@ public class ej1r {
                     double b = sc.nextDouble();
                     System.out.println("Quina es la altura?");
                     double h = sc.nextDouble();
-                    imprimirResultat(Calculs.areaTriangle(b, h));
+                    imprimirResultat(ej2r.areaTriangle(b, h));
                     break;
 
                 case "rectangle":
@@ -43,7 +43,7 @@ public class ej1r {
                     double c1 = sc.nextDouble();
                     System.out.println("Costat 2:");
                     double c2 = sc.nextDouble();
-                    imprimirResultat(Calculs.areaRectangle(c1, c2));
+                    imprimirResultat(ej2r.areaRectangle(c1, c2));
                     break;
 
                 case "trapezi":
@@ -53,7 +53,7 @@ public class ej1r {
                     double b_trap = sc.nextDouble();
                     System.out.println("Altura (h):");
                     double h_trap = sc.nextDouble();
-                    imprimirResultat(Calculs.areaTrapezi(a, b_trap, h_trap));
+                    imprimirResultat(ej2r.areaTrapezi(a, b_trap, h_trap));
                     break;
 
                 case "rombe":
@@ -61,7 +61,7 @@ public class ej1r {
                     double dM = sc.nextDouble();
                     System.out.println("Diagonal menor:");
                     double dm = sc.nextDouble();
-                    imprimirResultat(Calculs.areaRombe(dM, dm));
+                    imprimirResultat(ej2r.areaRombe(dM, dm));
                     break;
 
                 case "paralelogram":
@@ -69,7 +69,7 @@ public class ej1r {
                     double bp = sc.nextDouble();
                     System.out.println("Altura:");
                     double hp = sc.nextDouble();
-                    imprimirResultat(Calculs.areaParalelogram(bp, hp));
+                    imprimirResultat(ej2r.areaParalelogram(bp, hp));
                     break;
 
                 default:
@@ -79,7 +79,3 @@ public class ej1r {
             sc.nextLine(); 
         sc.close();
     }
-    public static void imprimirResultat(double area) {
-        System.out.println("L area de tu figura es " + area);
-    }
-}
