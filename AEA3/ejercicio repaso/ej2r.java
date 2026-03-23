@@ -1,4 +1,4 @@
-public class Calculs {
+public class ej2r {
 
     public static double areaQuadrat(double costat) {
         return costat * costat;
