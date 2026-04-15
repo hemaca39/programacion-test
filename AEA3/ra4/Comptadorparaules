@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Comptadorparaules {
 
     public static void main(String[] args) {
-        String fitxerEntrada = "entrada.txt";
+        String fitxerEntrada = "entradaa.txt";
         String fitxerSortida = "sortida.txt";
         int totalParaules = 0;
 
