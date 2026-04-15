@@ -4,40 +4,29 @@ import java.util.Scanner;
 public class Comptadorparaules {
 
     public static void main(String[] args) {
-        String nomEntrada = "entrada.txt";
-        String nomSortida = "sortida.txt";
-
-
-        processarComptatge(nomEntrada, nomSortida);
-    }
-
-
-    public static void processarComptatge(String fitxerEntrada, String fitxerSortida) {
+        String fitxerEntrada = "entrada.txt";
+        String fitxerSortida = "sortida.txt";
         int totalParaules = 0;
-        File arxiuEntrada = new File(fitxerEntrada);
 
-        if (!arxiuEntrada.exists()) {
-            System.out.println("L'arxiu " + fitxerEntrada + " no s'ha trobat.");
-            return;
-        }
-
-        try (Scanner lector = new Scanner(arxiuEntrada)) {
+  
+        try (Scanner lector = new Scanner(new File(fitxerEntrada))) {
             while (lector.hasNext()) {
                 lector.next(); 
                 totalParaules++;
             }
         } catch (FileNotFoundException e) {
-            System.out.println("Eerrror: no s'ha pogut obrir el fitxer.");
+            System.err.println("L'arxiu " + fitxerEntrada + " no s'ha trobat.");
+            return; 
         } catch (Exception e) {
-            System.out.println("error inesperat durant la lectura: " + e.getMessage());
+            System.err.println("Error durant la lectura: " + e.getMessage());
+            return;
         }
 
-
-        try (PrintWriter escriptor = new PrintWriter(new FileWriter(fitxerSortida, false))) {
+        try (PrintWriter escriptor = new PrintWriter(new FileWriter(fitxerSortida))) {
             escriptor.println("El archivo tiene " + totalParaules + " palabras.");
-            System.out.println("operació finalitzada. Resultat escrit a " + fitxerSortida);
+            System.out.println("Operació completada. Recompte: " + totalParaules);
         } catch (IOException e) {
-            System.out.println("error en escriure al fitxer de sortida: " + e.getMessage());
+            System.err.println("Error en escriure el fitxer de sortida: " + e.getMessage());
         }
     }
 }
