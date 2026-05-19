@@ -2,6 +2,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
+
 public class CalculadoraFront extends JFrame implements ActionListener {
     
     private JTextField txtPantallaInput;
@@ -23,7 +24,7 @@ public class CalculadoraFront extends JFrame implements ActionListener {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(new BorderLayout(8, 8));
-        getContentPane().setBackground(new Color(23, 23, 23)); 
+        getContentPane().setBackground(new Color(23, 23, 23));
     }
 
     private void inicializarComponentes() {
@@ -61,7 +62,7 @@ public class CalculadoraFront extends JFrame implements ActionListener {
 
         for (String item : matrizBotones) {
             if (item.isEmpty()) {
-                panelBotones.add(new JLabel("")); 
+                panelBotones.add(new JLabel(""));
                 continue;
             }
             JButton boton = new JButton(item);
@@ -79,13 +80,13 @@ public class CalculadoraFront extends JFrame implements ActionListener {
         btn.setBorderPainted(false);
         
         if (texto.matches("[0-9.]")) {
-            btn.setBackground(new Color(45, 45, 45)); 
+            btn.setBackground(new Color(45, 45, 45));
             btn.setForeground(Color.WHITE);
         } else if (texto.matches("[+\\-*/=]")) {
-            btn.setBackground(new Color(241, 142, 33)); 
+            btn.setBackground(new Color(241, 142, 33));
             btn.setForeground(Color.WHITE);
         } else {
-            btn.setBackground(new Color(60, 60, 60)); 
+            btn.setBackground(new Color(60, 60, 60));
             btn.setForeground(Color.WHITE);
         }
     }
@@ -117,7 +118,7 @@ public class CalculadoraFront extends JFrame implements ActionListener {
                 operacionActual = "";
                 inicioDeNumero = true;
                 
-            } else if (inputComando.equals("<-")) { 
+            } else if (inputComando.equals("<-")) {
                 if (textoEnPantalla.length() > 1) {
                     txtPantallaInput.setText(textoEnPantalla.substring(0, textoEnPantalla.length() - 1));
                 } else {
@@ -125,7 +126,7 @@ public class CalculadoraFront extends JFrame implements ActionListener {
                     inicioDeNumero = true;
                 }
                 
-            } else if (inputComando.equals("+/-")) { 
+            } else if (inputComando.equals("+/-")) {
                 double valorNum = Double.parseDouble(textoEnPantalla) * -1;
                 txtPantallaInput.setText(valorNum == (long) valorNum ? String.format("%d", (long) valorNum) : String.valueOf(valorNum));
                 

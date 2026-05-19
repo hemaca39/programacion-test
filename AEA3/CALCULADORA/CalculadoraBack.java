@@ -1,4 +1,3 @@
-
 public class CalculadoraBack {
     private double acumulado;
     private double ultimoOperando;
@@ -55,6 +54,7 @@ public class CalculadoraBack {
     public void setEsNuevoNumero(boolean valor) {
         this.esNuevoNumero = valor;
     }
+
     private String formatearNumero(double valor) {
         if (valor == (long) valor) {
             return String.format("%d", (long) valor);
