@@ -12,7 +12,7 @@ public class CalculadoraFront extends JFrame implements ActionListener {
     private String operacionActual = "";
 
     public CalculadoraFront() {
-        backEnd = new CalculadoraBack();
+        backEnd = new CalculadoraBack(); // Inicialización correcta para evitar el NullPointerException
         crearVentana();
         inicializarComponentes();
         setVisible(true);
@@ -94,7 +94,11 @@ public class CalculadoraFront extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         String inputComando = e.getActionCommand();
-        String textoEnPantalla = txtPantallaInput.getText();
+        String textoEnPantalla = txtPantallaInput.getText().trim();
+
+        if (textoEnPantalla.isEmpty()) {
+            textoEnPantalla = "0";
+        }
 
         try {
             if (inputComando.matches("[0-9]")) {
@@ -127,8 +131,11 @@ public class CalculadoraFront extends JFrame implements ActionListener {
                 }
                 
             } else if (inputComando.equals("+/-")) {
-                double valorNum = Double.parseDouble(textoEnPantalla) * -1;
-                txtPantallaInput.setText(valorNum == (long) valorNum ? String.format("%d", (long) valorNum) : String.valueOf(valorNum));
+                double valorNum = Double.parseDouble(textoEnPantalla);
+                if (valorNum != 0) {
+                    valorNum = valorNum * -1;
+                    txtPantallaInput.setText(valorNum == (long) valorNum ? String.format("%d", (long) valorNum) : String.valueOf(valorNum));
+                }
                 
             } else if (inputComando.matches("[+\\-*/=]")) {
                 double numeroProcesable = Double.parseDouble(textoEnPantalla);
